@@ -3,7 +3,7 @@
 import { useState, Suspense } from 'react'
 import { signIn } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import Image from 'next/image'
+import Logo from '@/components/shared/Logo'
 import Link from 'next/link'
 
 function LoginForm() {
@@ -45,15 +45,8 @@ function LoginForm() {
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="mb-8 flex justify-center">
-          <Link href="/">
-            <Image
-              src="/images/logo.png"
-              alt="Tia Cê Pizzas"
-              width={150}
-              height={150}
-              className="h-32 w-32 object-contain"
-              priority
-            />
+          <Link href="/" aria-label="Voltar para a página inicial">
+            <Logo size="lg" />
           </Link>
         </div>
 
